@@ -2,22 +2,128 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>عرض</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الملف الشخصي</title>
     <style>
-        body, html {
-            height: 100%;
+        * {
+            box-sizing: border-box;
             margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
             display: flex;
             justify-content: center;
             align-items: center;
+            min-height: 100vh;
         }
-        h1 {
-            font-size: 3rem;
-            font-family: Arial, sans-serif;
+        .profile-card {
+            background: #ffffff;
+            width: 100%;
+            max-width: 500px;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            text-align: right;
+        }
+        .profile-header {
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .profile-header h1 {
+            font-size: 26px;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+        .profile-header p {
+            font-size: 16px;
+            color: #7f8c8d;
+            font-weight: bold;
+        }
+        .info-section {
+            margin-bottom: 20px;
+        }
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #f1f1f1;
+        }
+        .info-label {
+            font-weight: bold;
+            color: #34495e;
+        }
+        .info-value {
+            color: #555;
+        }
+        .traits-section {
+            margin-top: 25px;
+            background: #f9fbfc;
+            padding: 15px;
+            border-radius: 8px;
+            border-right: 4px solid #3498db;
+        }
+        .traits-section h3 {
+            font-size: 18px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .traits-list {
+            list-style-type: none;
+            padding-right: 0;
+        }
+        .traits-list li {
+            padding: 5px 0;
+            color: #555;
+            position: relative;
+            padding-right: 15px;
+        }
+        .traits-list li::before {
+            content: "•";
+            color: #3498db;
+            font-weight: bold;
+            position: absolute;
+            right: 0;
         }
     </style>
 </head>
 <body>
-    <h1>أحلى خلق الله</h1>
+
+    <div class="profile-card">
+        <div class="profile-header">
+            <h1>أسامة إبراهيم محمدي</h1>
+            <p>مشرف تعليمي</p>
+        </div>
+
+        <div class="info-section">
+            <div class="info-item">
+                <span class="info-label">العمر:</span>
+                <span class="info-value">39 عاماً</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">محل الإقامة:</span>
+                <span class="info-value">مصر (الإسكندرية) / السعودية (الرياض)</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">المهنة:</span>
+                <span class="info-value">مشرف تعليمي</span>
+            </div>
+        </div>
+
+        <div class="traits-section">
+            <h3>الصفات الشخصية والمهنية</h3>
+            <ul class="traits-list">
+                <li>سهل وسلس في التعامل والتواصل</li>
+                <li>دقيق ومحب للإتقان والخلو من الأخطاء الإملائية</li>
+                <li>شغوف بتطوير البرمجة والتقنية التعليمية</li>
+                <li>منظم ويميل للحلول الابتكاريه</li>
+            </ul>
+        </div>
+    </div>
+
 </body>
 </html>
