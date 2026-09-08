@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الملف الشخصي</title>
+    <title>إليكِ...</title>
     <style>
         * {
             box-sizing: border-box;
@@ -12,118 +12,118 @@
         }
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f7f6;
-            color: #333;
+            background: linear-gradient(135deg, #1e1e2f, #2d1b36);
+            color: #f0f0f0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            padding: 20px;
         }
-        .profile-card {
-            background: #ffffff;
+        .poem-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             width: 100%;
-            max-width: 500px;
+            max-width: 550px;
             padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-            text-align: right;
-        }
-        .profile-header {
-            border-bottom: 2px solid #eaeaea;
-            padding-bottom: 20px;
-            margin-bottom: 25px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
             text-align: center;
         }
-        .profile-header h1 {
-            font-size: 26px;
-            color: #2c3e50;
-            margin-bottom: 8px;
+        .poem-card h2 {
+            font-size: 24px;
+            color: #ffb6c1;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
         }
-        .profile-header p {
+        .verse {
+            font-size: 19px;
+            line-height: 2.2;
+            color: #ffffff;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+        .divider {
+            width: 50px;
+            height: 2px;
+            background-color: #ffb6c1;
+            margin: 25px auto;
+            border-radius: 2px;
+        }
+        .interactive-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px dashed rgba(255, 255, 255, 0.2);
+        }
+        .action-btn {
+            background: #ffb6c1;
+            color: #1e1e2f;
+            border: none;
+            padding: 10px 20px;
             font-size: 16px;
-            color: #7f8c8d;
             font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-bottom: 15px;
         }
-        .info-section {
-            margin-bottom: 20px;
+        .action-btn:hover {
+            background: #ffc0cb;
+            transform: scale(1.05);
         }
-        .info-item {
+        .suggestion-box {
+            font-size: 16px;
+            color: #ffe4e1;
+            min-height: 40px;
             display: flex;
-            justify-content: space-between;
-            padding: 10px 0;
-            border-bottom: 1px solid #f1f1f1;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.5s ease-in-out;
         }
-        .info-label {
-            font-weight: bold;
-            color: #34495e;
-        }
-        .info-value {
-            color: #555;
-        }
-        .traits-section {
-            margin-top: 25px;
-            background: #f9fbfc;
-            padding: 15px;
-            border-radius: 8px;
-            border-right: 4px solid #3498db;
-        }
-        .traits-section h3 {
-            font-size: 18px;
-            color: #2c3e50;
-            margin-bottom: 10px;
-        }
-        .traits-list {
-            list-style-type: none;
-            padding-right: 0;
-        }
-        .traits-list li {
-            padding: 5px 0;
-            color: #555;
-            position: relative;
-            padding-right: 15px;
-        }
-        .traits-list li::before {
-            content: "•";
-            color: #3498db;
-            font-weight: bold;
-            position: absolute;
-            right: 0;
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
 
-    <div class="profile-card">
-        <div class="profile-header">
-            <h1>أسامة إبراهيم محمدي</h1>
-            <p>مشرف تعليمي</p>
-        </div>
+    <div class="poem-card">
+        <h2>إليكِ...</h2>
+        <p class="verse">يا ضياءَ الروحِ يا نبعَ الحنانْ<br>يا أجملَ ما في العمرِ مِن زمانْ</p>
+        <p class="verse">وجهكِ البسامُ يكفي للعيونْ<br>أن ترى في الكونِ ألوانَ الأمانْ</p>
+        <div class="divider"></div>
+        <p class="verse">سحرُ عينيْكِ حديثٌ لا يملّْ<br>وفيكِ كلُّ الحسنِ والرفعة حلّْ</p>
+        <p class="verse">ضحكةٌ منكِ تزيدُ القلبَ دفئاً<br>وفي عينيكِ ألقى المستقرّْ</p>
+        <div class="divider"></div>
+        <p class="verse">دمتِ لي عمراً وروضاً للمنى<br>وفيكِ كلُّ الحبِّ يحلو واطمأنْ</p>
 
-        <div class="info-section">
-            <div class="info-item">
-                <span class="info-label">العمر:</span>
-                <span class="info-value">39 عاماً</span>
-            </div>
-            <div class="info-item">
-                <span class="info-label">محل الإقامة:</span>
-                <span class="info-value">مصر (الإسكندرية) / السعودية (الرياض)</span>
-            </div>
-            <div class="info-item">
-                <span class="info-label">المهنة:</span>
-                <span class="info-value">مشرف تعليمي</span>
-            </div>
-        </div>
-
-        <div class="traits-section">
-            <h3>الصفات الشخصية والمهنية</h3>
-            <ul class="traits-list">
-                <li>سهل وسلس في التعامل والتواصل</li>
-                <li>دقيق ومحب للإتقان والخلو من الأخطاء الإملائية</li>
-                <li>شغوف بتطوير البرمجة والتقنية التعليمية</li>
-                <li>منظم ويميل للحلول الابتكاريه</li>
-            </ul>
+        <div class="interactive-section">
+            <button class="action-btn" onclick="showSuggestion()">اطرح فكرة أو لمسة جديدة</button>
+            <div id="suggestionDisplay" class="suggestion-box">انقري الزر لاقتراح مفاجأة رومانسية أو فكرة لتطوير الصفحة!</div>
         </div>
     </div>
+
+    <script>
+        const suggestions = [
+            "💡 اقتراح: إضافة صوت خلفي هادئ أو نغمة رومانسية خفيفة تعمل عند فتح الصفحة.",
+            "💡 اقتراح: جعل الخلفية تحتوي على قلوب متطايرة خفيفة بتصميم متحرك (CSS Animation).",
+            "💡 اقتراح: زر لتغيير لون الخلفية وتدرجاتها حسب رغبة المتابع.",
+            "💡 اقتراح: إدراج عداد زمني يحسب الأيام والساعات منذ اللحظات الجميلة معاً.",
+            "💡 اقتراح: إضافة قسم خاص بصورة مميزة تتوسط الأبيات بشكل أنيق وفخم."
+        ];
+
+        function showSuggestion() {
+            const randomIndex = Math.floor(Math.random() * suggestions.length);
+            const display = document.getElementById('suggestionDisplay');
+            display.style.opacity = 0;
+            setTimeout(() => {
+                display.innerText = suggestions[randomIndex];
+                display.style.opacity = 1;
+            }, 200);
+        }
+    </script>
 
 </body>
 </html>
