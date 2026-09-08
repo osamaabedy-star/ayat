@@ -51,39 +51,26 @@
             margin: 25px auto;
             border-radius: 2px;
         }
-        .interactive-section {
-            margin-top: 30px;
-            padding-top: 20px;
+        .stats-section {
+            margin-top: 25px;
+            padding-top: 15px;
             border-top: 1px dashed rgba(255, 255, 255, 0.2);
-        }
-        .action-btn {
-            background: #ffb6c1;
-            color: #1e1e2f;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            font-weight: bold;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: 0.3s;
-            margin-bottom: 15px;
-        }
-        .action-btn:hover {
-            background: #ffc0cb;
-            transform: scale(1.05);
-        }
-        .suggestion-box {
-            font-size: 16px;
-            color: #ffe4e1;
-            min-height: 40px;
+            font-size: 14px;
+            color: #ffb6c1;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            animation: fadeIn 0.5s ease-in-out;
+            justify-content: space-around;
+            background: rgba(0, 0, 0, 0.15);
+            border-radius: 10px;
+            padding: 12px;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(5px); }
-            to { opacity: 1; transform: translateY(0); }
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .stat-value {
+            font-weight: bold;
+            color: #ffffff;
         }
     </style>
 </head>
@@ -99,30 +86,43 @@
         <div class="divider"></div>
         <p class="verse">دمتِ لي عمراً وروضاً للمنى<br>وفيكِ كلُّ الحبِّ يحلو واطمأنْ</p>
 
-        <div class="interactive-section">
-            <button class="action-btn" onclick="showSuggestion()">اطرح فكرة أو لمسة جديدة</button>
-            <div id="suggestionDisplay" class="suggestion-box">انقري الزر لاقتراح مفاجأة رومانسية أو فكرة لتطوير الصفحة!</div>
+        <div class="stats-section">
+            <div class="stat-item">
+                <span>عدد مرات الزيارة</span>
+                <span id="visitCount" class="stat-value">0</span>
+            </div>
+            <div class="stat-item">
+                <span>آخر زيارة</span>
+                <span id="lastVisit" class="stat-value">-</span>
+            </div>
         </div>
     </div>
 
     <script>
-        const suggestions = [
-            "💡 اقتراح: إضافة صوت خلفي هادئ أو نغمة رومانسية خفيفة تعمل عند فتح الصفحة.",
-            "💡 اقتراح: جعل الخلفية تحتوي على قلوب متطايرة خفيفة بتصميم متحرك (CSS Animation).",
-            "💡 اقتراح: زر لتغيير لون الخلفية وتدرجاتها حسب رغبة المتابع.",
-            "💡 اقتراح: إدراج عداد زمني يحسب الأيام والساعات منذ اللحظات الجميلة معاً.",
-            "💡 اقتراح: إضافة قسم خاص بصورة مميزة تتوسط الأبيات بشكل أنيق وفخم."
-        ];
-
-        function showSuggestion() {
-            const randomIndex = Math.floor(Math.random() * suggestions.length);
-            const display = document.getElementById('suggestionDisplay');
-            display.style.opacity = 0;
-            setTimeout(() => {
-                display.innerText = suggestions[randomIndex];
-                display.style.opacity = 1;
-            }, 200);
+        // استخدام الذاكرة المحلية للمتصفح (localStorage) لحفظ التعداد ووقت الزيارة
+        let visits = localStorage.getItem('pageVisits');
+        
+        if (visits === null) {
+            visits = 1;
+        } else {
+            visits = parseInt(visits) + 1;
         }
+        localStorage.setItem('pageVisits', visits);
+
+        // حفظ وتنسيق وقت آخر زيارة
+        const now = new Date();
+        const timeString = now.toLocaleDateString('ar-SA', { 
+            month: 'short', 
+            day: 'numeric', 
+            hour: '2-digit', 
+            minute: '2-digit' 
+        });
+        
+        localStorage.setItem('lastVisitTime', timeString);
+
+        // عرض القيم في الصفحة
+        document.getElementById('visitCount').innerText = visits;
+        document.getElementById('lastVisit').innerText = timeString;
     </script>
 
 </body>
