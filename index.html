@@ -2,128 +2,19 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إليكِ...</title>
+    <title>صفحة فارغة</title>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
         body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #1e1e2f, #2d1b36);
-            color: #f0f0f0;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-        .poem-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            width: 100%;
-            max-width: 550px;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-            text-align: center;
-        }
-        .poem-card h2 {
-            font-size: 24px;
-            color: #ffb6c1;
-            margin-bottom: 25px;
-            letter-spacing: 1px;
-        }
-        .verse {
-            font-size: 19px;
-            line-height: 2.2;
-            color: #ffffff;
-            margin-bottom: 15px;
-            font-weight: 300;
-        }
-        .divider {
-            width: 50px;
-            height: 2px;
-            background-color: #ffb6c1;
-            margin: 25px auto;
-            border-radius: 2px;
-        }
-        .stats-section {
-            margin-top: 25px;
-            padding-top: 15px;
-            border-top: 1px dashed rgba(255, 255, 255, 0.2);
-            font-size: 14px;
-            color: #ffb6c1;
-            display: flex;
-            justify-content: space-around;
-            background: rgba(0, 0, 0, 0.15);
-            border-radius: 10px;
-            padding: 12px;
-        }
-        .stat-item {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-        }
-        .stat-value {
-            font-weight: bold;
-            color: #ffffff;
+            height: 100vh;
+            margin: 0;
+            font-size: 3rem;
+            font-family: Arial, sans-serif;
         }
     </style>
 </head>
 <body>
-
-    <div class="poem-card">
-        <h2>إليكِ...</h2>
-        <p class="verse">يا ضياءَ الروحِ يا نبعَ الحنانْ<br>يا أجملَ ما في العمرِ مِن زمانْ</p>
-        <p class="verse">وجهكِ البسامُ يكفي للعيونْ<br>أن ترى في الكونِ ألوانَ الأمانْ</p>
-        <div class="divider"></div>
-        <p class="verse">سحرُ عينيْكِ حديثٌ لا يملّْ<br>وفيكِ كلُّ الحسنِ والرفعة حلّْ</p>
-        <p class="verse">ضحكةٌ منكِ تزيدُ القلبَ دفئاً<br>وفي عينيكِ ألقى المستقرّْ</p>
-        <div class="divider"></div>
-        <p class="verse">دمتِ لي عمراً وروضاً للمنى<br>وفيكِ كلُّ الحبِّ يحلو واطمأنْ</p>
-
-        <div class="stats-section">
-            <div class="stat-item">
-                <span>عدد مرات الزيارة</span>
-                <span id="visitCount" class="stat-value">0</span>
-            </div>
-            <div class="stat-item">
-                <span>آخر زيارة</span>
-                <span id="lastVisit" class="stat-value">-</span>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // استخدام الذاكرة المحلية للمتصفح (localStorage) لحفظ التعداد ووقت الزيارة
-        let visits = localStorage.getItem('pageVisits');
-        
-        if (visits === null) {
-            visits = 1;
-        } else {
-            visits = parseInt(visits) + 1;
-        }
-        localStorage.setItem('pageVisits', visits);
-
-        // حفظ وتنسيق وقت آخر زيارة
-        const now = new Date();
-        const timeString = now.toLocaleDateString('ar-SA', { 
-            month: 'short', 
-            day: 'numeric', 
-            hour: '2-digit', 
-            minute: '2-digit' 
-        });
-        
-        localStorage.setItem('lastVisitTime', timeString);
-
-        // عرض القيم في الصفحة
-        document.getElementById('visitCount').innerText = visits;
-        document.getElementById('lastVisit').innerText = timeString;
-    </script>
-
-</body>
+كل مرة اقول مش هقول رخمة مفيش فايدة </body>
 </html>
